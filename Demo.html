@@ -1,0 +1,86 @@
+﻿
+
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>iframeWin</title>
+    
+	<script type="text/javascript" src="jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.easyui.min.js"></script>	
+	<script type="text/javascript" src="locale/easyui-lang-zh_CN.js" charset="UTF-8"></script>
+	<link rel="stylesheet" type="text/css" href="themes/default/easyui.css">
+	<link rel="stylesheet" type="text/css" href="themes/icon.css">
+
+	<script type="text/javascript" src="jquery.iframeWin.js"></script>
+	
+    <style type="text/css">
+        *{
+            font-size:12px;
+        }
+        body {
+            font-family:helvetica,tahoma,verdana,sans-serif;
+            padding:2px;
+            font-size:13px;
+            margin:0;
+        }
+
+    </style>
+    <script type="text/javascript">
+
+		function openUrlPage(url){
+			
+			$.iframe.win({
+				title:"打开网页",
+				url:url,
+				width: 600,
+				height: 400,
+				modal: true
+			});
+		
+		}
+		
+		function openNewIFrame(){
+			$.iframe.win({
+				title:"自己的页面",
+				url:"WindowPage.html",
+				width: 400,
+				height: 300,
+				modal: true,
+				onClosed:function(){
+					alert("iframe被关闭了");
+				}
+			});
+		
+		}
+		
+		function closeIFrame(){
+			$.iframe.close();
+		
+		}
+
+    </script>
+
+</head>
+<body>
+
+<div class="easyui-layout" style="height:590px;">
+<div data-options="region:'north'" style="height:32px">
+
+    <div style="padding:2px;">
+        <a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" onclick="openUrlPage('http://www.baidu.com');" >
+            新开百度窗口
+        </a>
+		<a href="javascript:void(0);" class="easyui-linkbutton" iconCls="icon-add" onclick="openNewIFrame();" >
+            新开IFrame窗口
+        </a>
+
+    </div>
+
+
+</div>
+
+</div>
+
+
+</body>
+</html>
