@@ -18,4 +18,5 @@ iframeWin For Easy UI. 为 Easy UI 扩展的支持IFrame插件
 博客：http://taven.cnblogs.com
 
 <br/>
-
+下载地址：https://github.com/tavenli/iframeWin/archive/master.zip
+<br/>
